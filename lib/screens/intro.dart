@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:project/screens/slide_puzzle.dart';
+import 'package:project/screens/page.dart';
+
 
 import 'game_screen.dart';
 
@@ -102,7 +103,7 @@ class _IntroScreen01State extends State<IntroScreen01> {
               Container(
                 width: double.infinity,
                 height: 200,
-                child: const Image(image: AssetImage("images/Maeve Wiley.png"),
+                child: const Image(image: AssetImage("images/MaeveWiley.png"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -142,7 +143,7 @@ class _IntroScreen01State extends State<IntroScreen01> {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) =>  SlidePuzzle()),
+                            MaterialPageRoute(builder: (context) =>  MyApp()),
                           );
                         },
                         backgroundColor: Colors.green,

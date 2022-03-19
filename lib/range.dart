@@ -54,27 +54,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
               ),
             ),
 
-            Padding(
-              padding: const EdgeInsets.only(right: 30.0),
-              child: TextButton(
-                onPressed: () {
-                  if(className1=='1'){
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const GameScreen()),
-                    );
-                    count=3;
-                    isvisible=true;
-                    isvisible1=true;
-                  }
-
-
-
-
-                },
-                child: const Text('Try again', style: TextStyle(color: Colors.black, fontSize: 15, fontFamily: 'Relay')),
-              ),
-            ),
+            const Text('Try again', style: TextStyle(color: Colors.black, fontSize: 15, fontFamily: 'Relay')),
           ],
         ),
       );
@@ -84,40 +64,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
 
 
 
-  @override
-  void initState() {
-    controller = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 7),
-    );
-
-    controller.addStatusListener((AnimationStatus status) {
-      if(status==AnimationStatus.completed){
-        if(show==1){
-          Alert();
-        }
-
-
-
-        print("completed");
-      }
-    });
-    controller.addListener(() {
-      setState(() {
-      });
-    });
-    controller.repeat(reverse: false);
-    controller.forward();
-    super.initState();
-
-  }
-
-  @override
-  void dispose() {
-    controller.dispose();
-
-    super.dispose();
-  }
 
 
   @override

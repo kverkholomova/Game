@@ -2,23 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:project/screens/game_screen.dart';
 import 'package:project/screens/main_screen.dart';
 
-Icon _counter=Icon(Hearts[0]['icon'],color: Colors.blue[900]);
-Icon _counter1=Icon(Hearts[1]['icon'],color: Colors.blue[900]);
-Icon _counter2=Icon(Hearts[2]['icon'],color: Colors.blue[900]);
-
-List<Map<String, IconData>> Hearts=[
-  {
-    'icon':Icons.favorite,
-  },
-  {
-    'icon':Icons.favorite,
-  },
-  {
-    'icon':Icons.favorite,
-  }
-];
-
-
 class MyAppBar extends AppBar{
   MyAppBar({ Key? key,  Widget? title})
       :super(key: key,title: title,actions: <Widget>[
@@ -29,7 +12,7 @@ class MyAppBar extends AppBar{
           leading: Builder(
             builder: (BuildContext context) {
               return IconButton(
-                icon: const Icon(Icons.arrow_back),
+                icon: const Icon(Icons.arrow_back, color: Colors.white,),
                 onPressed: () { Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const MainScreen()),
@@ -39,30 +22,22 @@ class MyAppBar extends AppBar{
             },
           ),
 
-          title:  Text('Level $number'),
+          title:  Text('Diary'),
           actions: [
-            Row(
-              children: [
-                Visibility(child: _counter, visible: isvisible),
-                Visibility(child: _counter1, visible: isvisible1),
-                Visibility(child: _counter2, visible: isvisible2),
-                /*Icon(Hearts[count]['icon'],color: Colors.deepOrange),
-                  Icon(Hearts[count]['icon'],color: Colors.deepOrange),*/
-              ],
-            ),
+
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16),
 
                 child: InkWell(
                   child: Padding(padding: EdgeInsets.only(top: 20,right: 10),
-                    child: Text("$point"),
+                    child: Text("$point", style: TextStyle(color: Colors.white),),
                   ),
 
                 )
 
             ),
           ],
-          backgroundColor: Colors.blue[400],
+          backgroundColor: Colors.black87,
           toolbarHeight: 60,
         ),
 

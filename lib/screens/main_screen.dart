@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'game_screen.dart';
 
 
-int running_number=1;
+
 
 
 class MainScreen extends StatefulWidget {
@@ -20,15 +20,11 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[100],
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           children: [
 
-            Padding(
-              padding: const EdgeInsets.only(left: 240,top: 20),
-              child: Text('Points: $point',style: TextStyle(color: Colors.black87, fontSize: 20, fontFamily: 'Relay')),
-            ),
 
 
             Column(
@@ -55,33 +51,7 @@ class _MainScreenState extends State<MainScreen> {
                   child: Text("Play game!",style: TextStyle(color: Colors.blue,fontSize: 40, fontFamily: 'DancingScript')),
                 ),*/
 
-                Padding(
-                  padding: EdgeInsets.only(top: 80),
-                  child: SizedBox(
-                    width: 200,
-                    height: 70,
-                    child: ElevatedButton( onPressed: () {
-
-                      if(currentLevel==1){
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const GameScreen()),
-                        );
-                      }
-
-                      print('works');
-                    },
-                        style: ElevatedButton.styleFrom(
-                            primary: Colors.blue[400],
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20.0),
-                                side: BorderSide(color: Colors.white, width: 1)
-                            )
-
-                        ),
-                        child: Icon(Icons.arrow_right,size: 60)),
-                  ),
-                )
+                Icon(Icons.arrow_right,size: 60)
               ],
             ),
           ],
