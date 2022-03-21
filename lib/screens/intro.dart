@@ -100,10 +100,10 @@ class _IntroScreen01State extends State<IntroScreen01> {
       body: SafeArea(
         child: Column(
             children: [
-              Container(
+              const SizedBox(
                 width: double.infinity,
                 height: 200,
-                child: const Image(image: AssetImage("images/MaeveWiley.png"),
+                child: Image(image: AssetImage("images/MaeveWiley.png"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -134,7 +134,7 @@ class _IntroScreen01State extends State<IntroScreen01> {
                     Container(
                         width: double.infinity,
                         height: 370,
-                        child: Image(image: NetworkImage("https://thumbs.dreamstime.com/b/pretty-sad-girl-long-hair-vintage-monochrome-style-isolated-vector-illustration-162135351.jpg"),
+                        child: const Image(image: NetworkImage("https://thumbs.dreamstime.com/b/pretty-sad-girl-long-hair-vintage-monochrome-style-isolated-vector-illustration-162135351.jpg"),
                           fit: BoxFit.cover,
                         )),
                     Padding(

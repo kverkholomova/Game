@@ -4,9 +4,6 @@ import 'package:flutter/material.dart';
 import 'game_screen.dart';
 
 
-
-
-
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
 
@@ -24,8 +21,6 @@ class _MainScreenState extends State<MainScreen> {
       body: SafeArea(
         child: Column(
           children: [
-
-
 
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
